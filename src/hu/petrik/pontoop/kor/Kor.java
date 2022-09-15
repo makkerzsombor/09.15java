@@ -5,6 +5,10 @@ public class Kor {
     private int x;
     private int y;
 
+    public int getR() {
+        return r;
+    }
+
     public Kor(int r) {
         this.r = r;
         this.x = 0;

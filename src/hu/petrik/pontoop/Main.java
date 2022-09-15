@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-         /**Pont p1 = new Pont();
+        /**Pont p1 = new Pont();
          Pont p2 = new Pont(0, 0);
          Pont p3 = new Pont(3, 4);
          Pont p4 = new Pont(100);
@@ -103,19 +103,27 @@ public class Main {
 
         System.out.print("\nKérem adja meg hogy a kört mennyivel akarja nagyítani (természetes szám) vagy kicsinyíteni (negatív szám)");
         int bekertszam = sc.nextInt();
-        System.out.printf("Az átméretezés végeredménye: %s",k.getKorMéretezes(bekertszam, sugar));
+        System.out.printf("Az átméretezés végeredménye: %s", k.getKorMéretezes(bekertszam, sugar));
 
-        System.out.print("\n"+kr.toString());
+        System.out.print("\n" + kr.toString());
 
-        Kor[] korok =new Kor[10];
+        Kor[] korok = new Kor[10];
         for (int i = 0; i < korok.length; i++) {
             korok[i] = new Kor();
         }
         for (int i = 0; i < korok.length; i++) {
-            System.out.printf("\n %d -ik elem a: %s",i+1 ,korok[i].toString());
+            System.out.printf("\n %d -ik elem a: %s", i + 1, korok[i].toString());
         }
 
-
+        int max = 0;
+        int index = 0;
+        for (int i = 0; i < korok.length; i++) {
+            if (korok[i].getR() > max) {
+                max = korok[i].getR();
+                index = i;
+            }
+        }
+        System.out.printf("\n A legnagyobb kör területe a: %s", korok[index].toString());
 
     }
 }
