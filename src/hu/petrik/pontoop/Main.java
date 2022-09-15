@@ -100,7 +100,8 @@ public class Main {
 
         System.out.print("\nKérem adja meg hogy a kört mennyivel akarja nagyítani (természetes szám) vagy kicsinyíteni (negatív szám)");
         int bekertszam = sc.nextInt();
-        k.getKorMéretezes(bekertszam, sugar);
+        System.out.printf("Az átméretezés végeredménye: %s",k.getKorMéretezes(bekertszam, sugar));
+
 
     }
 }

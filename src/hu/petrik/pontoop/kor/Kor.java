@@ -1,7 +1,5 @@
 package hu.petrik.pontoop.kor;
 
-import hu.petrik.pontoop.pont.Pont;
-
 public class Kor {
     private int r;
     private int x;
@@ -28,13 +26,15 @@ public class Kor {
         return Math.pow(r, 2) * 3.14;
     }
 
-    public double getKorMéretezes(int szam, int sugar) {
+    public String getKorMéretezes(int szam, int sugar) {
         if (szam >= 0) {
             sugar += szam;
         } else {
-            sugar -= szam;
+            sugar += szam;
         }
-        return getKorKerulete(sugar) + getKorTerulete(sugar);
+        double t = Math.pow(sugar, 2) * 3.14;
+        double k = 2 * sugar * 3.14;
+        return "Kerület: " + k + " Terület: " + t;
     }
 
 }
