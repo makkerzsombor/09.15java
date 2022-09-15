@@ -5,10 +5,6 @@ public class Pont {
     private int y;
 
     public Pont(int n){
-        extracted(n);
-    }
-
-    private void extracted(int n) {
         this.x = (int) (Math.random() * ((2 * n) + 1)) - n;
         this.y = (int) (Math.random() * ((2 * n) + 1)) - n;
     }
