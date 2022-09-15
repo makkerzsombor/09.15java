@@ -4,7 +4,7 @@ public class Pont {
     private int x;
     private int y;
 
-    public Pont(int n){
+    public Pont(int n) {
         this.x = (int) (Math.random() * ((2 * n) + 1)) - n;
         this.y = (int) (Math.random() * ((2 * n) + 1)) - n;
     }
@@ -17,6 +17,10 @@ public class Pont {
     public Pont(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+
+    public double getOrigotolMertTavolsag() {
+        return Math.sqrt((Math.pow(this.x, 2) + Math.pow(this.y, 2)));
     }
 
     @Override
