@@ -7,7 +7,6 @@ public class Kor {
 
     public Kor(int r) {
         this.r = r;
-        //Pont p2 = new Pont(0, 0);
         this.x = 0;
         this.y = 0;
     }
@@ -36,5 +35,7 @@ public class Kor {
         double k = 2 * sugar * 3.14;
         return "Kerület: " + k + " Terület: " + t;
     }
-
+    public String kiiras(int p1, int p2) {
+        return "("  + p1 + ","+ p2 + "," + r +')';
+    }
 }

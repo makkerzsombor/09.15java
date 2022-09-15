@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        /**
-         Pont p1 = new Pont();
+
+         /**Pont p1 = new Pont();
          Pont p2 = new Pont(0, 0);
          Pont p3 = new Pont(3, 4);
          Pont p4 = new Pont(100);
@@ -18,8 +18,8 @@ public class Main {
          System.out.println(p1);
          System.out.println(p2);
          System.out.println(p3);
-         System.out.println(p4);
-         */
+         System.out.println(p4);*/
+
 
         Pont[] pontok = new Pont[100];
         for (int i = 0; i < pontok.length; i++) {
@@ -44,6 +44,7 @@ public class Main {
 
         //sqrt gyök
         //pow négyzet
+
 
         //saját feladatok:
 
@@ -79,6 +80,7 @@ public class Main {
         //Körös feladatok
 
         System.out.print("\nKérem adja meg a kör sugarát centiméterben:");
+
         int sugar = sc.nextInt();
         Kor k = new Kor(sugar);
         System.out.println("Csak a radius-os kör kerülete. területe:");
@@ -102,6 +104,6 @@ public class Main {
         int bekertszam = sc.nextInt();
         System.out.printf("Az átméretezés végeredménye: %s",k.getKorMéretezes(bekertszam, sugar));
 
-
+        System.out.printf("\n%s",k.kiiras(p1, p2));
     }
 }
