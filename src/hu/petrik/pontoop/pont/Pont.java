@@ -4,9 +4,18 @@ public class Pont {
     private int x;
     private int y;
 
+    public Pont(int n){
+        extracted(n);
+    }
+
+    private void extracted(int n) {
+        this.x = (int) (Math.random() * ((2 * n) + 1)) - n;
+        this.y = (int) (Math.random() * ((2 * n) + 1)) - n;
+    }
+
     public Pont() {
-        x = 0;
-        y = 0;
+        this.x = 0;
+        this.y = 0;
     }
 
     public Pont(int x, int y) {
@@ -16,9 +25,7 @@ public class Pont {
 
     @Override
     public String toString() {
-        return "Pont{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        //return "(" + + x + + y +')';
+        return String.format("(%d, %d)", this.x, this.y);
     }
 }
