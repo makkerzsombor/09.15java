@@ -7,9 +7,15 @@ public class Kor {
 
 
     public Kor(int r){
-
+        this.r = r;
+        this.x = 0;
+        this.y = 0;
     }
     public Kor(int r, int x, int y){
-
+        this.r = r;
+        this.x = x;
+        this.y = y;
     }
+
+
 }
