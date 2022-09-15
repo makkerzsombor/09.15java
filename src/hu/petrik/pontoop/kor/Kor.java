@@ -11,6 +11,13 @@ public class Kor {
         this.y = 0;
     }
 
+    public Kor()
+    {
+        this.x = (int)(Math.random()*100);
+        this.y = (int)(Math.random()*100);
+        this.r = (int)(Math.random()*100)+1;
+    }
+
     public Kor(int r, int x, int y) {
         this.r = r;
         this.x = x;
@@ -35,13 +42,9 @@ public class Kor {
         double k = 2 * sugar * 3.14;
         return "Kerület: " + k + " Terület: " + t;
     }
-    public String kiiras(int p1, int p2, int r) {
-        return "("  + p1 + ","+ p2 + "," + r +')';
-    }
-    public String getRandom(){
-        int x =(int) (Math.random() * ((2 * 10) + 1)) - 10;
-        int y =(int) (Math.random() * ((2 * 10) + 1)) - 10;
-        int r =(int) (Math.random() * ((2 * 10) + 1));
-        return "("+ x + " "+ y + " " + r + ")";
+
+    @Override
+    public String toString() {
+        return "(" + x +  "," + y + "," + r + ')';
     }
 }

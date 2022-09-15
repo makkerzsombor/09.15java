@@ -83,6 +83,7 @@ public class Main {
 
         int sugar = sc.nextInt();
         Kor k = new Kor(sugar);
+        Kor kr = new Kor();
         System.out.println("Csak a radius-os kör kerülete. területe:");
         System.out.printf("\nA kör kerülete: %f", k.getKorKerulete(sugar));
         System.out.printf("\nA kör területe: %f négyzet centiméter.", k.getKorTerulete(sugar));
@@ -104,11 +105,11 @@ public class Main {
         int bekertszam = sc.nextInt();
         System.out.printf("Az átméretezés végeredménye: %s",k.getKorMéretezes(bekertszam, sugar));
 
-        System.out.printf("\n%s",k.kiiras(p1, p2, sugar));
+        System.out.print("\n"+kr.toString());
 
-        System.out.println("\n10 db (x,y,r)");
-        for (int i = 0; i < 10; i++) {
-            System.out.printf("\n%s",k.getRandom());
-        }
+        //System.out.println("\n10 db (x,y,r)");
+
+
+
     }
 }
