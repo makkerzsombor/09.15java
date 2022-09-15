@@ -107,7 +107,13 @@ public class Main {
 
         System.out.print("\n"+kr.toString());
 
-        //System.out.println("\n10 db (x,y,r)");
+        Kor[] korok =new Kor[10];
+        for (int i = 0; i < korok.length; i++) {
+            korok[i] = new Kor();
+        }
+        for (int i = 0; i < korok.length; i++) {
+            System.out.printf("\n %d -ik elem a: %s",i+1 ,korok[i].toString());
+        }
 
 
 
