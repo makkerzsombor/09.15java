@@ -104,6 +104,11 @@ public class Main {
         int bekertszam = sc.nextInt();
         System.out.printf("Az átméretezés végeredménye: %s",k.getKorMéretezes(bekertszam, sugar));
 
-        System.out.printf("\n%s",k.kiiras(p1, p2));
+        System.out.printf("\n%s",k.kiiras(p1, p2, sugar));
+
+        System.out.println("\n10 db (x,y,r)");
+        for (int i = 0; i < 10; i++) {
+            System.out.printf("\n%s",k.getRandom());
+        }
     }
 }

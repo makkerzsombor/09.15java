@@ -35,7 +35,13 @@ public class Kor {
         double k = 2 * sugar * 3.14;
         return "Kerület: " + k + " Terület: " + t;
     }
-    public String kiiras(int p1, int p2) {
+    public String kiiras(int p1, int p2, int r) {
         return "("  + p1 + ","+ p2 + "," + r +')';
+    }
+    public String getRandom(){
+        int x =(int) (Math.random() * ((2 * 10) + 1)) - 10;
+        int y =(int) (Math.random() * ((2 * 10) + 1)) - 10;
+        int r =(int) (Math.random() * ((2 * 10) + 1));
+        return "("+ x + " "+ y + " " + r + ")";
     }
 }
