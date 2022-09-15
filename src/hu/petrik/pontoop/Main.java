@@ -18,5 +18,8 @@ public class Main {
         for (int i = 0; i < pontok.length; i++) {
             pontok[i] = new Pont(100);
         }
+        for (Pont p: pontok){
+            System.out.println(p);
+        }
     }
 }
