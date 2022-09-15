@@ -1,5 +1,6 @@
 package hu.petrik.pontoop;
 
+import hu.petrik.pontoop.kor.Kor;
 import hu.petrik.pontoop.pont.Pont;
 
 import java.util.Scanner;
@@ -40,8 +41,9 @@ public class Main {
         //sqrt gyök
         //pow négyzet
 
-        //saját feladatok
-        System.out.print("\nKérem adja meg az első pont első koordinátáját:");
+        //saját feladatok:
+
+        /**System.out.print("\nKérem adja meg az első pont első koordinátáját:");
         int a1 = sc.nextInt();
         System.out.print("Kérem adja meg az első pont második koordinátáját:");
         int a2 = sc.nextInt();
@@ -52,8 +54,11 @@ public class Main {
         int b2 = sc.nextInt();
         Pont ps1 = new Pont();
         System.out.println(ps1.getTavolsag(a1, a2, b1, b2));
+         */
 
         //Melyik síknegyedbe esik?
+
+        /**
         System.out.print("Kérem adja meg az első pont első koordinátáját:");
         int s1 = sc.nextInt();
         System.out.print("Kérem adja meg az első pont második koordinátáját:");
@@ -66,7 +71,16 @@ public class Main {
             System.out.println("A pont a 3-asba esik.");
         } else {
             System.out.println("A pont az 1-esbe esik.");
-        }
+        }*/
+        //Körös feladatok
+
+        System.out.print("\nKérem adja meg a kör sugarát centiméterben:");
+        int sugar = sc.nextInt();
+        Kor k = new Kor(sugar);
+        System.out.printf("A kör ");
+        System.out.println("Csak a radius-os kör kerülete. területe:");
+        System.out.printf("\nA kör kerülete: %f",k.getKorKerulete(sugar));
+        System.out.printf("\nA kör területe: %f négyzet centiméter.",k.getKorTerulete(sugar));
 
 
     }
