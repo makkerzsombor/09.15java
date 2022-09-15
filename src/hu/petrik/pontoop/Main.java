@@ -2,8 +2,11 @@ package hu.petrik.pontoop;
 
 import hu.petrik.pontoop.pont.Pont;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Pont p1 = new Pont();
         Pont p2 = new Pont(0, 0);
         Pont p3 = new Pont(3, 4);
@@ -31,6 +34,40 @@ public class Main {
             }
         }
         System.out.printf("A legtávolabbi pont az origotól a %d. pont, koordinátái: %s, origotól mért távolsága: %f "
-                ,(legtavolabbindex+1), pontok[legtavolabbindex], pontok[legtavolabbindex].getOrigotolMertTavolsag());
+                , (legtavolabbindex + 1), pontok[legtavolabbindex], pontok[legtavolabbindex].getOrigotolMertTavolsag());
+
+
+        //sqrt gyök
+        //pow négyzet
+
+        //saját feladatok
+        System.out.print("\nKérem adja meg az első pont első koordinátáját:");
+        int a1 = sc.nextInt();
+        System.out.print("Kérem adja meg az első pont második koordinátáját:");
+        int a2 = sc.nextInt();
+
+        System.out.print("Kérem adja meg a második pont első koordinátáját:");
+        int b1 = sc.nextInt();
+        System.out.print("Kérem adja meg a második pont második koordinátáját:");
+        int b2 = sc.nextInt();
+        Pont ps1 = new Pont();
+        System.out.println(ps1.getTavolsag(a1, a2, b1, b2));
+
+        //Melyik síknegyedbe esik?
+        System.out.print("Kérem adja meg az első pont első koordinátáját:");
+        int s1 = sc.nextInt();
+        System.out.print("Kérem adja meg az első pont második koordinátáját:");
+        int s2 = sc.nextInt();
+        if (s1 > 0 && s2 > 0) {
+            System.out.println("A pont a 4-esbe esik.");
+        } else if (s1 < 0 && s2 < 0) {
+            System.out.println("A pont a 2-esbe esik.");
+        } else if (s1 > 0 && s2 < 0) {
+            System.out.println("A pont a 3-asba esik.");
+        } else {
+            System.out.println("A pont az 1-esbe esik.");
+        }
+
+
     }
 }
