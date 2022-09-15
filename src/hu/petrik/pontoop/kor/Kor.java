@@ -28,4 +28,13 @@ public class Kor {
         return Math.pow(r, 2) * 3.14;
     }
 
+    public double getKorMéretezes(int szam, int sugar) {
+        if (szam >= 0) {
+            sugar += szam;
+        } else {
+            sugar -= szam;
+        }
+        return getKorKerulete(sugar) + getKorTerulete(sugar);
+    }
+
 }
